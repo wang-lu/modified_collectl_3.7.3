@@ -935,25 +935,25 @@ sub lustreOSSPrintExport {
   if ($type eq 'g') {
     if ($lustOpts =~ /s/) {
       if ($ossFlag) {
-        push @$ref1, 'lusost.reads';
+        push @$ref1, 'tost.reads';
         push @$ref2, 'reads/sec';
         push @$ref3, $lustreReadOpsTot/$intSecs;
         push @$ref4, 'Lustre OST';
         push @$ref5, undef;
         
-        push @$ref1, 'lusost.readkbs';
+        push @$ref1, 'tost.readkbs';
         push @$ref2, 'readkbs/sec';
         push @$ref3, $lustreReadKBytesTot / $intSecs;
         push @$ref4, 'Lustre OST';
         push @$ref5, undef;
 
-        push @$ref1, 'lusost.writes';
+        push @$ref1, 'tost.writes';
         push @$ref2, 'writes/sec';
         push @$ref3, $lustreWriteOpsTot / $intSecs;
         push @$ref4, 'Lustre OST';
         push @$ref5, undef;
 
-        push @$ref1, 'lusost.writekbs';
+        push @$ref1, 'tost.writekbs';
         push @$ref2, 'writekbs/sec';
         push @$ref3, $lustreWriteKBytesTot / $intSecs;
         push @$ref4, 'Lustre OST';

@@ -1346,37 +1346,37 @@ sub lustreClientPrintExport {
           foreach my $fsName (@clientFSNames) {
             my $fs = $clientFSData{$fsName};
 
-            push @$ref1, "lusost.reads.$fsName";
+            push @$ref1, "cltops.reads.$fsName";
             push @$ref2, 'reads/sec';
             push @$ref3, $fs->{read}{value} / $intSecs;
             push @$ref4, 'Lustre client';
             push @$ref5, undef;
             
-            push @$ref1, "lusost.readkbs.$fsName";
+            push @$ref1, "cltthu.readkbs.$fsName";
             push @$ref2, 'readkbs/sec';
             push @$ref3, $fs->{readKB}{value} / $intSecs;
             push @$ref4, 'Lustre client';
             push @$ref5, undef;
             
-            push @$ref1, "lusost.readSizeKB.$fsName";
+            push @$ref1, "cltsize.readSizeKB.$fsName";
             push @$ref2, 'readSizeKB';
             push @$ref3, $fs->{read}{value} ? $fs->{readKB}{value} / $fs->{read}{value} : 0;
             push @$ref4, 'Lustre client';
             push @$ref5, undef;
             
-            push @$ref1, "lusost.writes.$fsName";
+            push @$ref1, "cltops.writes.$fsName";
             push @$ref2, 'writes/sec';
             push @$ref3, $fs->{write}{value} / $intSecs;
             push @$ref4, 'Lustre client';
             push @$ref5, undef;
             
-            push @$ref1, "lusost.writekbs.$fsName";
+            push @$ref1, "cltthu.writekbs.$fsName";
             push @$ref2, 'writekbs/sec';
             push @$ref3, $fs->{writeKB}{value} / $intSecs;
             push @$ref4, 'Lustre client';
             push @$ref5, undef;
             
-            push @$ref1, "lusost.writeSizeKB.$fsName";
+            push @$ref1, "cltsize.writeSizeKB.$fsName";
             push @$ref2, 'writeSizeKB';
             push @$ref3, $fs->{write}{value} ? $fs->{writeKB}{value} / $fs->{write}{value} : 0;
             push @$ref4, 'Lustre client';
@@ -1420,49 +1420,49 @@ sub lustreClientPrintExport {
           foreach my $fsName (@clientFSNames) {
             my $fs = $clientFSData{$fsName};
             
-            push @$ref1, "lusost.open.$fsName";
+            push @$ref1, "cltops.open.$fsName";
             push @$ref2, 'opens/sec';
             push @$ref3, $fs->{open}{value};
             push @$ref4, 'Lustre client';
             push @$ref5, undef;
             
-            push @$ref1, "lusost.close.$fsName";
+            push @$ref1, "cltops.close.$fsName";
             push @$ref2, 'closes/sec';
             push @$ref3, $fs->{close}{value} / $intSecs;
             push @$ref4, 'Lustre client';
             push @$ref5, undef;
             
-            push @$ref1, "lusost.getattr.$fsName";
+            push @$ref1, "cltops.getattr.$fsName";
             push @$ref2, 'getattrs/sec';
             push @$ref3, $fs->{getattr}{value} / $intSecs;
             push @$ref4, 'Lustre client';
             push @$ref5, undef;
             
-            push @$ref1, "lusost.setattr.$fsName";
+            push @$ref1, "cltops.setattr.$fsName";
             push @$ref2, 'setattrs/sec';
             push @$ref3, $fs->{setattr}{value} / $intSecs;
             push @$ref4, 'Lustre client';
             push @$ref5, undef;
             
-            push @$ref1, "lusost.seek.$fsName";
+            push @$ref1, "cltops.seek.$fsName";
             push @$ref2, 'seeks/sec';
             push @$ref3, $fs->{seek}{value} / $intSecs;
             push @$ref4, 'Lustre client';
             push @$ref5, undef;
             
-            push @$ref1, "lusost.fsync.$fsName";
+            push @$ref1, "cltops.fsync.$fsName";
             push @$ref2, 'fsyncs/sec';
             push @$ref3, $fs->{fsync}{value} / $intSecs;
             push @$ref4, 'Lustre client';
             push @$ref5, undef;
             
-            push @$ref1, "lusost.dirtyhits.$fsName";
+            push @$ref1, "cltops.dirtyhits.$fsName";
             push @$ref2, 'dirtyhits/sec';
             push @$ref3, $fs->{dirty_pages_hits}{value} / $intSecs;
             push @$ref4, 'Lustre client';
             push @$ref5, undef;
             
-            push @$ref1, "lusost.dirtymiss.$fsName";
+            push @$ref1, "cltops.dirtymiss.$fsName";
             push @$ref2, 'dirtymisses/sec';
             push @$ref3, $fs->{dirty_pages_misses}{value} / $intSecs;
             push @$ref4, 'Lustre client';

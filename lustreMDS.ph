@@ -699,19 +699,19 @@ sub lustreMDSPrintExport {
 	  $mdsData{setattr}{value} +
           $mdsData{setxattr}{value};
 
-        push @$ref1, 'lusmds.gattrP';
+        push @$ref1, 'lusmdt.gattrP';
         push @$ref2, 'ops/sec';
         push @$ref3, $getattrPlus / $intSecs;
         push @$ref4, 'Lustre MDS';
         push @$ref5, 'Get Attributes';
         
-        push @$ref1, 'lusmds.sattrP';
+        push @$ref1, 'lusmdt.sattrP';
         push @$ref2, 'ops/sec';
         push @$ref3, $setattrPlus / $intSecs;
         push @$ref4, 'Lustre MDS';
         push @$ref5, 'Set Attributes';
 
-        push @$ref1, 'lusmds.sync';
+        push @$ref1, 'lusmdt.sync';
         push @$ref2, 'ops/sec';
         push @$ref3, $mdsData{sync}{value} / $intSecs;
         push @$ref4, 'Lustre MDS';
@@ -721,7 +721,7 @@ sub lustreMDSPrintExport {
 	  $mdsData{unlink}{value} +
 	  $mdsData{rmdir}{value};
 
-        push @$ref1, 'lusmds.unlink';
+        push @$ref1, 'lusmdt.unlink';
         push @$ref2, 'ops/sec', 
         push @$ref3, $delete / $intSecs;
         push @$ref4, 'Lustre MDS';
@@ -731,19 +731,19 @@ sub lustreMDSPrintExport {
 	  $mdsData{mkdir}{value} +
           $mdsData{reint_create}{value};
 
-        push @$ref1, 'lusmds.create';
+        push @$ref1, 'lusmdt.create';
         push @$ref2, 'ops/sec';
         push @$ref3, $create / $intSecs;
         push @$ref4, 'Lustre MDS';
         push @$ref5, 'File/Dir Creates';
 
-        push @$ref1, 'lusmds.open';
+        push @$ref1, 'lusmdt.open';
         push @$ref2, 'ops/sec',
         push @$ref3, $mdsData{open}{value} / $intSecs,;
         push @$ref4, 'Lustre MDS';
         push @$ref5, 'File Opens';
 
-        push @$ref1, 'lusmds.close';
+        push @$ref1, 'lusmdt.close';
         push @$ref2, 'ops/sec';
         push @$ref3, $mdsData{close}{value} / $intSecs;
         push @$ref4, 'Lustre MDS';
